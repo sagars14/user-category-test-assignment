@@ -26,7 +26,11 @@ In this project we have used following dependencies
 
 ## Live Url
 
+http://165.22.220.209:3000/
+
 ## Swagger Url & Documentation
+
+http://165.22.220.209:3000/api/
 
 ### For testing REST API through swagger
 
