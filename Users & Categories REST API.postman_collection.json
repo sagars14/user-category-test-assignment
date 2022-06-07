@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "084d31a6-ca43-4a4f-ac94-72efc6e32a9b",
+		"name": "Users & Categories REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create/Signup User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"test5user\",\n    \"email\":\"test7@gmail.com\",\n    \"password\": \"asd654as6d5a4sd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test7@gmail.com\",\n    \"password\":\"asd654as6d5a4sd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Create Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmNjhiN2RlZTllODM4N2QzYjg0NGEiLCJuYW1lIjoidGVzdDJ1c2VyIiwiZW1haWwiOiJ0ZXN0NEBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjIxNzU3fQ.9U3Lf_a9GEi2mEFIpAhYalJKFFqpy9Sm_jvADa__Sm4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\":\"newTest\",\n    \"categoryDetails\": \"This category has access to only new Test items\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/add/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"add",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmYTFkMDcyZDFiZTI5MzM0YzczZjMiLCJuYW1lIjoidGVzdDV1c2VyIiwiZW1haWwiOiJ0ZXN0NUBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjI5NTMyfQ.DoAcXhhylQxBvjWEL41EC1qfdP3oeRtzU4PUYF62y5g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\": \"629fa53603409633411e92d0\",\n    \"category\":\"new\",\n    \"categoryDetails\":\"This category has access to only new items\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/update/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"update",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmYTFkMDcyZDFiZTI5MzM0YzczZjMiLCJuYW1lIjoidGVzdDV1c2VyIiwiZW1haWwiOiJ0ZXN0NUBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjI5NTMyfQ.DoAcXhhylQxBvjWEL41EC1qfdP3oeRtzU4PUYF62y5g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/delete/categories?categoryId=629fa53603409633411e92d0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"delete",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "629fa53603409633411e92d0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmYTFkMDcyZDFiZTI5MzM0YzczZjMiLCJuYW1lIjoidGVzdDV1c2VyIiwiZW1haWwiOiJ0ZXN0NUBnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjI5NTMyfQ.DoAcXhhylQxBvjWEL41EC1qfdP3oeRtzU4PUYF62y5g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/category/get/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"get",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Email-Categories",
+			"item": [
+				{
+					"name": "Get Email Categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmYTgwZWE0NGNjMTM5YTJmNGYxMDYiLCJuYW1lIjoidGVzdDV1c2VyIiwiZW1haWwiOiJ0ZXN0N0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjM4MzAyfQ.w7XA8qnwQWCZJLL0au8VPKb85u9dtRSKBMk5LUaT2Wk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/email/get/categories?categoryId=629f4dc235181da37ed46f19",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"email",
+								"get",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "629f4dc235181da37ed46f19"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Email Against Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmYTgwZWE0NGNjMTM5YTJmNGYxMDYiLCJuYW1lIjoidGVzdDV1c2VyIiwiZW1haWwiOiJ0ZXN0N0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjM4MzAyfQ.w7XA8qnwQWCZJLL0au8VPKb85u9dtRSKBMk5LUaT2Wk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\":\"629f4dc235181da37ed46f19\",\n    \"email\":\"xyz5@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/email/add/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"email",
+								"add",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Email Against Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmYTgwZWE0NGNjMTM5YTJmNGYxMDYiLCJuYW1lIjoidGVzdDV1c2VyIiwiZW1haWwiOiJ0ZXN0N0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjM4MzAyfQ.w7XA8qnwQWCZJLL0au8VPKb85u9dtRSKBMk5LUaT2Wk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryId\":\"629fca673567f65393317167\",\n    \"email\":\"xyz4@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/email/update/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"email",
+								"update",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category Against Email Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlmYTgwZWE0NGNjMTM5YTJmNGYxMDYiLCJuYW1lIjoidGVzdDV1c2VyIiwiZW1haWwiOiJ0ZXN0N0BnbWFpbC5jb20iLCJwYXNzd29yZCI6ImFzZDY1NGFzNmQ1YTRzZCIsIl9fdiI6MCwiaWF0IjoxNjU0NjcyOTc3fQ.JJscFwwq-C4HHo_3nTHKsAQk4Pa7U3au7UYtJ4uFg1Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/email/delete/categories?categoryId=62a04f3130d9ae189459eeaa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"email",
+								"delete",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "62a04f3130d9ae189459eeaa"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
